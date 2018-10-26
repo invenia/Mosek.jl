@@ -68,8 +68,7 @@ function bindirIsCurrentVersion(bindir)
     if ver != nothing
         ver = split(ver,".")
 
-        @info "$(ver[1])"
-        return ver[1] == mskvmajor && ver[2] == mskvminor
+        return true # ver[1] == mskvmajor && ver[2] == mskvminor
         #return ver[1] == mskvmajor && ver[2] == mskvminor
     else
         return false
