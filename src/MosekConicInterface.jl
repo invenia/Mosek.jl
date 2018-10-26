@@ -346,7 +346,7 @@ function MathProgBase.loadproblem!(m::MosekMathProgConicModel,
                             end
                         end
                     end
-                    conslack[idxs] = -barvarptr
+                    conslack[idxs] .= -barvarptr
 
                     barvarptr += 1
                 end
