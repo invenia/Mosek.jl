@@ -54,6 +54,7 @@ function versionFromBindir(bindir ::AbstractString)
         txt = read(`$bindir/$mosekbin`,String)
         @info "$(txt)"
         m = match(r"\s*MOSEK Version ([0-9]+\.[0-9]+\.[0-9])",txt)
+        @info "$m"
         if m == nothing
             return nothing
         else
